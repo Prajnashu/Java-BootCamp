@@ -4,7 +4,7 @@ public class StringToEnum {
     private enum Cities {
         DELHI("Capital"),
         BENGALURU("IT hub"),
-        CHENNAI("Vaathi Coming"),
+        CHENNAI("Architecture, Beaches"),
         KOLKATA("City of Joy");
 
         private String description;
@@ -15,6 +15,7 @@ public class StringToEnum {
     }
 
     public static void main(String[] args) {
+        System.out.println("Available options: " + "\nDELHI " + "BENGALURU " + "CHENNAI " + "KOLKATA");
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter your string : ");
             String s = sc.nextLine();
