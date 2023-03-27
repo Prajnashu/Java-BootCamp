@@ -1,5 +1,7 @@
 package day2;
 
+import java.util.Scanner;
+
 public class MaxCharInString {
 
     public char getMaxOccurringChar(String str)
@@ -30,14 +32,37 @@ public class MaxCharInString {
 
     public static void main(String[] args) {
         //Total 256 possible characters in a string.
-        // for(int i=0; i<255; i++) {
-        //     System.out.println((char)i + " " + i);
-        // } 
-        String str = "sample string";
-        MaxCharInString ms = new MaxCharInString();
-        System.out.println("Max occurring character is "
-                           + ms.getMaxOccurringChar(str));
-    }
+                // for(int i=0; i<255; i++) {
+                //     System.out.println((char)i + " " + i);
+                // }
+        boolean c = true;
+        String str;
+        try (Scanner sc = new Scanner(System.in)) {
+            while(c) {
+                System.out.println("Enter the string to test");
+            str = sc.nextLine();
+            if(str.equals("")) {
+                try {
+                    throw new NullStringException("Enter a non empty string");
+                } catch (NullStringException e) {
+                    System.out.println(e.getMessage());
 
+                }
+            } else {
+                c = false;
+                MaxCharInString ms = new MaxCharInString();
+                System.out.println("Max occurring character is "
+                           + ms.getMaxOccurringChar(str));
+            }
+        }
+        
+    }
     
+}
+}
+
+class NullStringException extends Exception {
+    public NullStringException(String s) {
+        super(s);
+    }
 }
