@@ -5,9 +5,8 @@ package day2;
 
 
 public class StaticImplASDE {
-    public static String role; //static variable: Shared by all objects, there is only one copy in the memory.
-
-    //static block used to initialize the static variable. It is executed when the class is loaded into memory.
+    public static String role; 
+    
     static {
         role = "ASDE";
     }

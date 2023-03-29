@@ -9,8 +9,6 @@ public class MaxCharInString {
         //Array with length = 256, one for each possible char in a string.
         int count[] = new int[256];
  
-        // Construct character count array from the input
-        // string.
         int len = str.length();
         for (int i = 0; i < len; i++)
             count[str.charAt(i)]++;

@@ -3,10 +3,8 @@ package day2;
 public class StringBuilderAndBuffer {
     public static void main(String[] args) {
         String s = "Hello";
-        //System.out.println(System.identityHashCode(s));
         System.out.println(s.hashCode());
         s += "world";
-        //System.out.println(System.identityHashCode(s));
         System.out.println(s.hashCode());
 
         StringBuilder sb = new StringBuilder("Hello");
