@@ -26,7 +26,7 @@ public class HashSetCompare {
         }
 
         if(areSame) {
-            System.out.println("Set Two contains set 1");
+            System.out.println("Set are same");
         } else {
             System.out.println("Set two doesn't contain all elements of set 1.");
         }
