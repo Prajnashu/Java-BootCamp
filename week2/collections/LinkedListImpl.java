@@ -1,5 +1,7 @@
 package week2.collections;
 
+import java.util.Scanner;
+
 public class LinkedListImpl {
 
     Node head;
@@ -31,6 +33,21 @@ public class LinkedListImpl {
         System.out.print(linkedList.head.value + " ");
         linkedList.head = linkedList.head.next;
       }
+  }
+
+  Node addNode(Node head, int value) {
+    Node temp = head;
+    if(head == null) {
+      temp = new Node(value);
+      return temp;
+    }
+    while(head.next == null) {
+      head = head.next;
+    }
+
+    Node n = new Node(value);
+    head.next = n;
+    return temp;
   }
 
 }
