@@ -1,3 +1,4 @@
+31/03/2023
 Load Factors;
 override .equals() for checking custom class equality;
 functional interface;
@@ -10,3 +11,7 @@ implement comparator using lambda;
 comparable and comparator interface;
     comparable interface has the compareTo method that needs to be implemented by the implementing class. For comparator, it does not need to implement the comparator interface, more than one compare methods can be used for comparator interface which is pretty cool.
 Wrapper classes, use your custom classes instead of wrapper classes in java.
+
+
+06/04/2023
+Go through hashing techniques.

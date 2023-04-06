@@ -1,4 +1,4 @@
-package week2.customCollection.wuestion1;
+package week2.customCollection.question1;
 
 import java.util.ArrayList;
 
