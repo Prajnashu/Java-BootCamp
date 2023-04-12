@@ -6,6 +6,7 @@ import static week3.ThreadsPractice.ThreadColor.ANSI_RESET;
 
 //Different ways of creating a thread.
 public class Main {
+    //Always illegal to start a thread more than once.
     public static void main(String[] args)  {
         System.out.println(ANSI_GREEN + "Hello From main thread.");
 

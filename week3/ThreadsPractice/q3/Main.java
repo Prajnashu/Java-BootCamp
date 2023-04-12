@@ -3,6 +3,7 @@ package week3.ThreadsPractice.q3;
 import static week3.ThreadsPractice.ThreadColor.ANSI_GREEN;
 import static week3.ThreadsPractice.ThreadColor.ANSI_RESET;
 
+//interrupt a thread
 public class Main {
     public static void main(String[] args)  {
         System.out.println(ANSI_GREEN + "Hello From main thread.");
@@ -17,7 +18,7 @@ public class Main {
             }
         }.start();
 
-        //anotherThread.interrupt();
+        anotherThread.interrupt();
 
         //The order might be different
         //we can never assume that threads will run in a particular order.
