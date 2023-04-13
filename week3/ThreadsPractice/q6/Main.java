@@ -36,9 +36,9 @@ class Message {
                 e.printStackTrace();
             }
         }
+        this.message = message;
         empty = false;
         notifyAll();
-        this.message = message;
     }
 }
 

@@ -1,0 +1,79 @@
+31/03/2023
+Load Factors;
+ArrayList is implemented over array, linkedList over deque.
+Both implement List interface but linkedList also implement DeQueue interface. 
+offer n poll to insert and delete to queue/linkedList.
+A framework is a set of classes and interfaces to build a functionality.
+Java collection framework provides set of interfaces and classes for storing and manipulating collections.
+override .equals() for checking custom class equality;
+functional interface;
+    Interface have only one abstract method. 4 main functional interface: 
+    1.consumer: One argument, no return type.
+    2.Predicate: one argument, some processing, return boolean value.
+    3.Function: one argument, some processing, return value.
+    4.supplier: no argument, return value.
+implement comparator using lambda;
+comparable and comparator interface;
+    comparable interface has the compareTo method that needs to be implemented by the implementing class. For comparator, it does not need to implement the comparator interface, more than one compare methods can be used for comparator interface which is pretty cool.
+Wrapper classes, use your custom classes instead of wrapper classes in java.
+
+
+06/04/2023
+Go through hashing techniques.
+
+comparable changes the class that implements it while comparator doesn't change the class.
+Generics and wildcard: upperbound, lowerbound, unbounded.
+serialsation and deserialisation: mostly used with databases(JPA, hibernate); transient keyword,serialversionUID
+
+
+Multithreading in java
+----------------------------
+MultiThreading: Programming language supports creating multiple threads and passes them to the operating system to run in parallel, it's called multithreading.
+
+The thread scheduler has a lot of control on when a thread will be called, when it will be suspended, JVM doesn't have much control on it. That's why, giving high priority to a thread doesn't guarentee it will be executed earlier than a low priority thread.
+
+Thread.sleep() puts the current thread in wait state for the specified period of time. Once the waiting time is over, the thread is put into runnable state and waits for the CPU for it's execution.
+->Thread.sleep() doesn't loose any monitors or locks the current thread has acquired.
+
+wait(), notify() and notifyAll are the three final methods in the java Object class that allows threads to communicate about the lock status of the resource.
+
+//volatile keyword with variables makes every thread read data from memory and not from thread cache.
+
+JVM guarentees that synchronized code will be executed by only one thread at a time.
+Internally, synchronized keyword uses locks to make sure only one thread is executing the synchronized code.
+
+We can use synchronized keyword in two ways: 1. make the entire method synchronized or make synchronized blocks.
+
+->Java synchronization provides data integrity at the cost of performance.
+Should use synchronized only where it is required. Redundantly using it will cause performance issues. Should always use lowest level of locking.
+
+When a method is synchronized, it locks the object. If the method is static, it locks the Class, so it's preferred to use synchronized block to lock only sections of method that needs synchronization.
+
+->synchronized keyword can't be used for constructors and variables.
+
+Java stack memory is used for the execution of a thread. They contain method specific values that are short lived and references to other objects in the heap that is getting referred from the method.
+
+Java ThreadPool and executor:
+-------------------------------
+Java threadpool manages the collection of Runnable threads.
+Executor is an object that manages and executes tasks in a separate thread.
+
+Need for callable: 
+--------------------
+To provide the feature of returning a result when it terminates.
+The run() method in Runnable doesn't return anything while the call() method in Callable returns a result on completion.
+IMP: Thread can't be created via Callable, it can only be created via Runnable.
+call() can throw exception while run() can't.
+
+Future is an object that holds the result, may not hold the result at the moment, but will do so once Callable returns the result.
+
+The execute method in executor class 
+
+intrinsic lock for each object.
+
+Use lock interface in producer consumer problem.
+semaphore
+executor, executorService
+Implement one eg with concurrentHashmap, copyAndWrite
+awaitTermination, shutdownNow
+FailFast and Failsafe iterators
