@@ -71,9 +71,28 @@ The execute method in executor class
 
 intrinsic lock for each object.
 
-Use lock interface in producer consumer problem.
-semaphore
-executor, executorService
-Implement one eg with concurrentHashmap, copyAndWrite
-awaitTermination, shutdownNow
-FailFast and Failsafe iterators
+Q.Use lock interface in producer consumer problem.
+synchronized keyword drawbacks:
+Threads that are waiting for the block can't be interrupted until they get the lock for the synchronized block.
+synchronized block must be in the same method.
+We can't get the info about intrinsic lock of the object or any more info about the lock.
+
+Lock interface provides a way for threads to acquire and release locks on shared resources, this avoids race condition and achives synchronization for multithreaded programs.
+
+Reentrant lock: If a thread is holding the lock and it reaches another part of code which requires the same lock, it can continue executing and doesn't need to acquire the same lock again.
+LockName.lock() to acquire the lock, LockName.unlock() to release the lock.
+
+Q.semaphore
+Q.executor, executorService
+Q.Implement one eg with concurrentHashmap, copyAndWrite
+Q.awaitTermination, shutdownNow
+Q.FailFast and Failsafe iterators
+Fail-safe iterators will not throw an exception even if the collection is modified while iterating over it.
+Fail-fast iterators will throw ConcurrentModificationException when the collection they are iterating is modified.
+
+
+17-04-2023
+Q.cyclic barrier and Count down latch.
+Q.concurrentHashmap, CopyOnWriteArrayList, Blocking Queue: best used for pc.
+CopyOnWrite more costly.
+
