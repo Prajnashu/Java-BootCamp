@@ -96,3 +96,48 @@ Q.cyclic barrier and Count down latch.
 Q.concurrentHashmap, CopyOnWriteArrayList, Blocking Queue: best used for pc.
 CopyOnWrite more costly.
 
+
+Java Streams:
+Is an interface that allows functional-style operations on streams of data.
+Streams don't change the original data structure, they only provide the result as per the pipelined methods.
+
+lazily operated: Intermediate operations don't produce any result until terminal operation is called. This helps to process large data sets efficiently, as only the necessary elements are processed and unnecessary operations are not performed.
+Stream doesn't store data, it operates on source data structure(collection or array) to produce pipelined data that we can use to perform specific operations.
+
+Optional:A container object which may or may not contain a non null value. If a value is present, isPresent() will return true and get() will return the object. Stream terminal operations return Optional object.
+
+Spliterator: manages a subset of the elements of the original data structure. Very helpful in supporting parallel execution.
+
+Intermediate Operations: Stream operations that returns a new stream are called intermediate operations. 
+filter() and map() are the two commonly used intermediate operations.
+
+Terminal operations: returns a result or produce a side effect. After a terminal operation is called on the stream, it consumes the stream and we can't use it any further. 
+forEach(), toArray(), min(), max(), findFirst(), anyMatch(), allMatch() are commonly used terminal methods.
+
+short circuiting operations: The operation produces finite stream for infinite stream.
+
+
+Creating Java Streams: 
+Stream.of(Integer array or similar type of data)
+Collection stream() to create sequential stream and parallelStream() to create parallel streams.
+Stream.generate() and stream.iterate()
+Arrays.stream() and String.chars() methods.
+
+
+Reverse process: Converting java streams to collection/array
+Stream.collect() method to get List, Set and Map from stream.
+Stream.toArray() to create array from the stream.
+
+Intermediate operations: 
+filter(): to test stream elements for a condiiton and generate filtered list.
+map(): to apply functions to a stream.
+sorted(): to sort the stream elements by passing comparator argument.
+flatMap(): create stream from the stream of list.
+
+
+Terminal operations:
+reduce(): to perform the reduction on the elements of the stream.
+count(): count number of items in the stream.
+
+Change the functional interfaces to custom functions in the stream APIs.
+Use Optional.orElse.
