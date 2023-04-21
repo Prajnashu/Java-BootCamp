@@ -141,3 +141,5 @@ count(): count number of items in the stream.
 
 Change the functional interfaces to custom functions in the stream APIs.
 Use Optional.orElse.
+
+//splitIterator
