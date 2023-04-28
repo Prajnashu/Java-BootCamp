@@ -22,7 +22,7 @@ public class ExecutorsExample {
         // Cached Thread Pool Executor
         //The worker threads created here are reused as needed.
         ExecutorService cachedThreadPoolExecutor = Executors.newCachedThreadPool();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5000; i++) {
             cachedThreadPoolExecutor.execute(new Runnable() {
                 public void run() {
                     System.out.println("Executing task in cachedThreadPoolExecutor");
@@ -34,7 +34,7 @@ public class ExecutorsExample {
         // Fixed Thread Pool Executor
         //Creates fixed-size pool of worker threads
         ExecutorService fixedThreadPoolExecutor = Executors.newFixedThreadPool(3);
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5000; i++) {
             fixedThreadPoolExecutor.execute(new Runnable() {
                 public void run() {
                     System.out.println("Executing task in fixedThreadPoolExecutor");

@@ -143,3 +143,56 @@ Change the functional interfaces to custom functions in the stream APIs.
 Use Optional.orElse.
 
 //splitIterator
+
+get() - waits for the async to complete, gets the value out of it.
+suppyAsync(), runAsync() - to produce a computable future from Supplier/Runnable.
+thenApply(), thenAccept(), thenRun() - Processing results of asynchrounous operations.
+thenCompose(), thenCombine(), thenAcceptBoth() - combining future.
+CompletableFuture.allOf static method allows to wait for the completion of all the futures provided in it's parameter.
+handle((value, exception to be thrown)), completeExceptionally() - to handle error.
+
+
+Fork Join framework: tools to help speed up parallel processing by attempting to use all available processor cores.
+                    -> Accomplishes this through divide and conquer approach.
+The framework first forks recursively braking the task into smaller independent subtasks until they are simple enough to run asynchronously.
+
+After that join part begins: Result of all subtasks are recursively joined into a single result. 
+
+Uses pool of thread called ForkJoinPool. This pool manages worker threads of type ForkJoinWorkerThread.
+
+ForkJoinPool: implementation of ExecutorService that manages worker threads.
+
+The ForkJoinPool doesn't create separate thread for every single subtask. Instead, each thread in the pool has it's own deque that stores tasks.
+Free threads steals works from busy thread's deque.
+
+ForkJoinPool instantiation: by ForkJoinPool.commonPool() method.
+
+ForkJoinTask is the base type for tasks executed inside ForkJoinPool.
+Recursive task : for tasks that return a value.
+RecursiveAction: for void tasks.
+
+to invoke the task: submit() and execute() need manual joining.
+invoke(): no need to join manually.
+
+
+JVM complete architecture
+Types of class loaders: Different types of loaders: bootstrap loader, extension loader and application class loader
+loader, linker, initialization
+Memory area: runtime data area.
+Go through J visual tool for how java execution happens.
+
+PC registers: for JVM, Program counter.
+Native method stacks: For OS level interactions.
+
+Execution: interpreter, JIT compiler: faster than interpreter
+Garbage collector: areas in heap: old generation, ing generation.
+
+Garbage collector in java:
+Young generation: Eden space, survivor space, minor gc works here.
+Old generation: major gc works here.
+Cleaning operation through Mark sweep algorithm.
+serial and parallel garbage collection type. G1 GC: introduced in java, concurrent mark and sweep.
+
+In java8 they replaced PermGen with metaSpace which is autoResizable.
+
+next session: creational design pattern and Solid design principle.
