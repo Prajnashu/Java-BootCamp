@@ -1,0 +1,13 @@
+Collection: containers that are used to groupe multiple items into a single unit.
+The collection framework consists of: 
+    Interfaces: Provides abstract data type to represent collection.
+        ->java.util.collection is the root interface. Contains method like size(), iterator(), add(), isEmpty(),remove(), clear() that every collection class must implement. The interface also provides bulk operations that works on the entire collection like: containsAll, addAll, removeAll, retainAll, clear.
+        ->java.util.List, java.util.Set, java.util.Queue, java.util.Map are some other interfaces. The Map interface doesn't inherit from Collection interface but it's part of the Collection framework.
+    Implementation Classes: Classes implementing the core collection interfaces. e.g. are ArrayList, HashMap, LinkedList etc. They cover our scenario in most of the cases but we can always extend them if the need arises.
+    Algorithms: Useful methods to provide some common functionalities like  searching, sorting.
+
+->If an unsupported operation is done, java throws UnsupportedOperationException.
+
+Iterable interface is extended by Collection interface.
+
+Go through hash-table.
