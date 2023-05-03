@@ -196,3 +196,46 @@ serial and parallel garbage collection type. G1 GC: introduced in java, concurre
 In java8 they replaced PermGen with metaSpace which is autoResizable.
 
 next session: creational design pattern and Solid design principle.
+
+Minimum 3 design patterns from every design patterns.
+
+SOLID principles:
+Robert C. Martin and Michael Feathers in the 2000s.
+Encourage to create more maintainable, understandable and flexible code. Consequently, as our application grows in size, we can reduce their complexity.
+1. S: Single responsibility: A class should have one and only one responsibility. This ensures it has only one reason to change. This helps in: 
+    ->reducing testing bcz a class with only one responsibility have lower test cases.
+    ->Lower coupling: a class with one responsibility will have fewer dependencies.
+    ->Organization: smaller, well organized classes are easier to search.
+2.Open for Extension, closed for modificaiton: By doing so, we stop ourselves from modifying existing code and creating new bugs.
+3.Liskov Substitution: A subclass of a class should be able to replace the super class without disrupting the behaviour of the program.
+4.Interface Segregation: Larger interface should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.
+5.Dependecy Inversion: Decoupling of software modules. Insteaed of high level modules depending on low level modules, both will depend on abstractions.
+
+Design Pattern: A design pattern is a well defined solution to a common software problem.
+    ->Promotes reusability which leads to robust and highly maintainable code.
+    ->Saves time if we sensibly use the design pattern.
+    ->It makes our code easy to understand and debug.
+
+3 categories of Java design patterns: 
+1.Creational Design Pattern: Provides solutions to instantiate an Object in the best possible way for specific situations.
+
+2.Structural Design Pattern: Provides different ways to create class structure.
+    ->Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies abstraction and implementation which can be developed independent of each other.
+
+3.Behavioural design Pattern: Provides a solution for better interaction between objects and how to provide loose-coupling and flexibility to extend easily.
+
+Isolation levels: 
+Read and commited
+ReadCommited
+with hibernate/JPA we can pass these isolation levels between the transactions.
+
+store processors.
+Indexes.
+
+hibernate is db agnostic. No need to worry about which SQL u will use, how to connect with a db etc.
+Caching mechanism is implemented internally.
+Error handling, associations all become easy.
+hibernate query language.
+JMS, rabbitMQ, kafka, ActiveMQ.
+
+Use Spring, JPA, DB2 for memory()

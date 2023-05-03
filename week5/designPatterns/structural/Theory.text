@@ -1,0 +1,13 @@
+Structural Design Pattern: Deals with object composition and the relationship between objects. They help to simplify the structure of an application by providing ways to organize objects and classes in a more flexible and efficient way.
+    ->Composite Design Patten: We use it when we have to treat all the objects(building blocks and composites) the same.
+        3 parts of it:
+            Base Component: Interface for all objects in the composition. Is used to work with all objects in the composition.
+            Leaf: Defines the behaviour for the elements in the composition. Building block of the composition.
+            Composite: Consists of leaf elements.
+
+
+    ->Adapter Design Pattern: Two unrelated interfaces can work together.
+        ->Java.util.Arrays.asList()
+        ->Java.io.InputStreamReader(InputStream) & Java.io.OutputStreamReader(OutputStream).
+
+    ->Bridge Design pattern: When we have interface hierarchies in both interfaces as well as implementations, the bridge design pattern is used to decouple the interfaces from implementations and hiding the implementation details from the client programs.

@@ -1,0 +1,18 @@
+Creational design pattern: specifies how to instantiate an object in the best possible way for a specific scenario.
+    ->Factory Design Patten: Widely used in JDK as well as Spring.
+        ->Is used when we have a superclass with multiple subclasses and based on input we need to return one of the subclass. The pattern takes out the responsibility of creating object to the factory class.
+        ->The superclass can be an interface, abstract class or normal java class.
+        ->Factory pattern removes the instantiation of actual implementation classes from client code. Factory pattern makes our code more robust, less coupled and easy to extend.
+        ->One example of it's implementation in JDK would be valueOf() method in wrapper classes.
+    
+    ->Builder Design Pattern: Was introduced to solve some of the problems with FDP when object contains a lot of attributes.
+        ->It helps to avoid these problems in FDP: 
+            ->Too many arguments passing is error prone.
+            ->Some of the parameters might be optional but we need to send every parameters in Factory or send Null if the value is not there.
+            ->The complexity of factory class increases when the object is complex.
+        ->Builder pattern helps to solve the issue with large number of optional parameters and building the object step-by-step and providing a method that will return the final object(This helps to avoid inconsistent state).
+        ->String builder append method uses this pattern.
+
+    Prototype Patten: Is used when object creation is costly and there is already a similar object with u.
+        ->This pattern copies the available object to a new object and modify it according to our needs.
+        ->The patten uses Java cloning to copy the object. It mandates that the object u are copying should provide the copying feature. It shouldn't be done by another class.

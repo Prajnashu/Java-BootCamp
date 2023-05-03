@@ -1,0 +1,14 @@
+Behavioural design pattern: Provides solution for better interaction between objects and providing loose coupling and flexibility to extend easily.
+    Observer Pattern: Useful when u are interested in the state of an object and want to get notified whenever there is any change. The objects that is watching the state is called observer while the object who is being watched is called subject.
+        ->Subject contains a list of observers to notify of any change to it's state, a method to notify all the observers of any change.
+        ->Java message service, event handling mechanisms use observer pattern.
+
+    Strategy Pattern: Is used when we have multiple algorithms for a specific task and we need to decide the actual implementation at runtime.
+        ->Collection.sort() method works by this pattern. Based on the different implementations of comparator interface, the objects are sorted in different ways.
+
+    Command Pattern: Used for loose coupling in a request-response model. Encapsulates a request as an object, letting u parameterize clients with different requests.
+        ->Request sent to the invoker and invoker pass it to the encapsulated command object.
+        ->Command object passes the request to appropriate method of receiver to perform the specific action.
+        ->Command object passes the request to the appropriate method of Receiver to perform the specific action. ->The client program create the receiver object and then attach it to the Command. Then it creates the invoker object and attach the command object to perform an action. Now when client program executes the action, it’s processed based on the command and receiver object.
+
+        ->widely used in Java Swing.
