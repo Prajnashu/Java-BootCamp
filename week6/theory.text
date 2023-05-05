@@ -1,0 +1,13 @@
+Java dependecy injection allows to remove the hard-coded dependencies and make the application loosely coupled, extendable and maintainable. Through dependecy injection in java, we move the dependecy resolution from compile time to run time.
+
+
+Richardson maturity model: To grade APIs based on their adherance to REST constraints.
+Factors for maturity of a service: 
+    ->URI
+    ->HTTP methods
+    ->HATEOAS(Hypermedia)
+
+HATEOAS refers to discoverability. Client can interact with REST API solely through the server's response.
+
+
+Lombok helps reducing boilerplate code. Annotations for getter, setter, toString, constructors.
