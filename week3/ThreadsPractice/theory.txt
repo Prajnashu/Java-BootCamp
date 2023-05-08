@@ -1,0 +1,7 @@
+MultiThreading is a programming concept where application can create small unit of tasks to execute in parallel.
+
+wait(), notify(), notifyAll() are 3 final methods in Object class that allows threads to communicate about the lock status of the resource. The current thread which invokes them should have the object monitor else IllegalMonitorException will be thrown.
+
+To achive Thread safety:
+Synchronized: Only one thread can execute a synchronized code at a time.
+when the method is synchronized, it locks the object. So, to increase performance, we can use synchronized blocks to lock only sections of method that needs synchronization.

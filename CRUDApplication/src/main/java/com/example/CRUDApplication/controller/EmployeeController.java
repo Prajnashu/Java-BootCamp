@@ -71,7 +71,12 @@ public class EmployeeController {
 
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         //TODO: implement the ifPresentOrElse equivalent for this.
-        //oldEmployeeData.ifPresentOrElse();
+//        oldEmployeeData.ifPresentOrElse( o -> {
+//            o.setDepartmentId(newEmployeeData.getDepartmentId());
+//            o.setName(newEmployeeData.getName());
+//            Employee updatedEmployeeData = employeeRepository.save(o);
+//            return new ResponseEntity<>(updatedEmployeeData, HttpStatus.OK);
+//        }, () -> { return new ResponseEntity<>(HttpStatus.NOT_FOUND); });
         }
 
     //Delete the employee by its id.
