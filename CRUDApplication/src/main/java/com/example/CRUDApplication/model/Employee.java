@@ -10,8 +10,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.hateoas.RepresentationModel;
 
-//The table to store employee data. Employee id is the primary key and is generated automatically.
+//The table to store employee data. Employee i d is the primary key and is generated automatically.
 @Entity
 @Table(name = "Employees")
 @NoArgsConstructor
@@ -19,7 +20,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Employee {
+public class Employee extends RepresentationModel<Employee> {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

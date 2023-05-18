@@ -11,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
 //import CRUDApplication.src.main.java.com.example.CRUDApplication.repo.EmployeeRepository;
 
 //Controller for all the CRUD operations
@@ -41,6 +44,8 @@ public class EmployeeController {
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
         Optional<Employee> employeeData = employeeRepository.findById(id);
         if(employeeData.isPresent()) {
+            Employee employee = employeeData.get();
+            employee.add(linkTo(methodOn(EmployeeController.class).deleteEmployeeById(id)).withRel("related"));
             return new ResponseEntity<Employee>(employeeData.get(), HttpStatus.OK);
         }
 
@@ -81,7 +86,7 @@ public class EmployeeController {
 
     //Delete the employee by its id.
     @DeleteMapping("/deleteEmployeeById/{id}")
-    public ResponseEntity<HttpStatus> DeleteMapping(@PathVariable Long id) {
+    public ResponseEntity<HttpStatus> deleteEmployeeById(@PathVariable Long id) {
         Optional<Employee> employeeData = employeeRepository.findById(id);
 //        employeeData.ifPresentOrElse(() -> {employeeRepository.deleteById(id);
 //            return new ResponseEntity<>(HttpStatus.OK);}, return new ResponseEntity<>(HttpStatus.NOT_FOUND));

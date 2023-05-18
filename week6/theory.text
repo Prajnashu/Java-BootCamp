@@ -11,3 +11,7 @@ HATEOAS refers to discoverability. Client can interact with REST API solely thro
 
 
 Lombok helps reducing boilerplate code. Annotations for getter, setter, toString, constructors.
+
+
+AOP
+Centralized exception handling, Logging
